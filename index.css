@@ -1,0 +1,187 @@
+* {
+            margin: 0;
+            box-sizing: border-box;
+            /* to avoid width addition after giving padding or margin */
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+            /* vertical center */
+        }
+
+        .item2{
+            display: none;
+        }
+
+        
+
+        .grid-container {
+                width: 65vw;
+                height: 80vh;
+
+                /* Flex_box layout module */
+                display: flex;
+                flex-direction: column;
+
+                overflow: scroll;
+                padding: 15px;
+                background-color: bisque;
+
+                /* justify-content: center; */
+            }
+ 
+
+            .item1 input{
+                width: 100%;
+                height: 8vh;
+                border: 1px solid grey;
+                border-radius: 6px;
+                padding-left: 20px;
+                font-size: 18px;
+            }
+
+            label{
+                padding-left: 5px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .plist{
+                margin: 15px;
+                /* background-color: aqua; */
+            }
+
+            .plist input{
+                display: block;
+                width: 100%;
+                height: 80%;
+
+                margin-top: 8px;
+                background-color: azure;
+                border: 1px solid grey;
+                border-radius: 8px;
+                font-size: 16px;
+                text-indent: 10px;
+            }
+
+            .button{
+                display: flex;
+                justify-content: center;
+                /* horizontal center */
+                align-items: center;
+                /* vertical center */
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+
+            .button input{
+                width: 50%;
+                height: 100%;
+                margin-top: 15px;
+                background-color: rgb(205, 248, 248);
+                border: 1px solid grey;
+                border-radius: 10px;
+                transition: width 1s, height 1s, font-size 1s, box-shadow 1s;
+            }
+
+            .button input:hover{
+                width: 60%;
+                height: 120%;
+                font-size: 20px;
+                box-shadow: 0px 0px 40px rgb(131, 5, 5);
+            }
+
+
+
+
+
+        @media only screen and (min-width:768px) {
+            .grid-container {
+                width: 80vw;
+                height: 80vh;
+
+                /* Grid layout module */
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 30px;
+
+                padding: 30px;
+                background-color: bisque;
+
+                /* justify-content: center; */
+            }
+            .button{
+                display: none;
+            }
+
+            .plist{
+                display: block;
+                justify-content: center;
+                align-items: center;
+            }
+
+            label{
+                padding-left: 10px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .item1 {
+                grid-column: 1 / 3;
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: left;
+                /* horizontal center */
+                align-items: center;
+                /* vertical center */
+            }
+
+            .item1 input{
+                width: 100%;
+                height: 65%;
+                border: 1px solid grey;
+                border-radius: 10px;
+                padding-left: 20px;
+                font-size: 18px;
+            }
+
+            .item2 {
+                display: flex;
+                justify-content: center;
+                /* horizontal center */
+                align-items: center;
+                /* vertical center */
+            }
+
+            .item2 input:hover{
+                width: 70%;
+                height: 60%;
+                font-size: 20px;
+                box-shadow: 0px 0px 40px rgb(131, 5, 5);
+            }
+
+            .item2 input{
+                width: 50%;
+                height: 40%;
+                background-color: rgb(205, 248, 248);
+                border: 1px solid grey;
+                border-radius: 10px;
+                transition: width 1s, height 1s, font-size 1s, box-shadow 1s;
+            }
+
+            .plist input{
+                width: 100%;
+                height: 35%;
+                background-color: azure;
+                border: 1px solid grey;
+                border-radius: 8px;
+                font-size: 16px;
+                text-indent: 10px;
+            }
+        }
+        
